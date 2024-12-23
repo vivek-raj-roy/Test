@@ -1,0 +1,92 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Black background */
+    color: #fff; /* White text */
+}
+
+/* Header Styles */
+header {
+    background-color: #1e1e1e; /* Dark background for header */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffcb00; /* Bright yellow color for text */
+}
+
+.logo-text span {
+    color: #fff;
+}
+
+/* Main Form Styles */
+main {
+    padding: 40px;
+    max-width: 400px;
+    margin: 40px auto;
+    background-color: #1e1e1e; /* Dark background for form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #333;
+    color: #fff;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffcb00; /* Bright yellow button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e6b800; /* Slightly darker yellow on hover */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+    color: white;
+    font-size: 14px;
+}
+
+footer a {
+    color: #ffcb00; /* Yellow links */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Link Styles for Forgot Password */
+main a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #ffcb00;
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
