@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, {{ session['username'] }}</h1>
+        {% if role == 'owner' %}
+            <a href="/manage/admins">Manage Admins</a><br>
+            <a href="/manage/ip">Manage IPs</a><br>
+            <a href="/manage/cookies">Manage Cookies</a><br>
+        {% endif %}
+        <a href="/logs">View Logs</a><br>
+        <a href="/logout">Logout</a>
+    </div>
+</body>
+</html>

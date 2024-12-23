@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+        
+        <div class="section">
+            <h2>Allowed IPs</h2>
+            <ul>
+                {% for ip in allowed_ips %}
+                <li>
+                    {{ ip }}
+                    <form method="post" action="{{ url_for('remove_ip', ip=ip) }}">
+                        <button class="btn btn-remove" type="submit">Remove</button>
+                    </form>
+                </li>
+                {% endfor %}
+            </ul>
+            <form method="post" action="{{ url_for('add_ip') }}">
+                <input type="text" name="new_ip" placeholder="Add new IP" required>
+                <button class="btn btn-add" type="submit">Add IP</button>
+            </form>
+        </div>
+
+        <div class="section">
+            <h2>Active Proxies</h2>
+            <ul>
+                {% for proxy in proxies %}
+                <li>
+                    {{ proxy }}
+                    <form method="post" action="{{ url_for('remove_proxy', proxy=proxy) }}">
+                        <button class="btn btn-remove" type="submit">Remove</button>
+                    </form>
+                </li>
+                {% endfor %}
+            </ul>
+            <form method="post" action="{{ url_for('add_proxy') }}">
+                <input type="text" name="new_proxy" placeholder="Add new Proxy" required>
+                <button class="btn btn-add" type="submit">Add Proxy</button>
+            </form>
+        </div>
+
+        <div class="logout">
+            <form method="post" action="{{ url_for('logout') }}">
+                <button class="btn btn-logout" type="submit">Logout</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
